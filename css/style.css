@@ -1,0 +1,52 @@
+body{
+	background-color: #532a2a;
+}
+.ba-container{
+	background-color: #feeecd;
+	margin: 100px auto;
+	width: 80vmin;
+	height: 80vmin;
+	border: 30px solid #feeecd;
+}
+.ba-checkers{
+	border: 5px solid #b27a63;
+	width: 100%;
+	height: 100%;
+}
+.ba-row{
+	height: 12.5%;
+	width: 100%;
+}
+.ba-row div{
+	width: 12.5%;
+	height: 100%;
+	float: left;
+	background-color: #feeecd;
+}
+.ba-row:nth-child(odd) div:nth-child(odd), .ba-row:nth-child(even) div:nth-child(even){
+	background-color: #b27a63;
+}
+.ba-odd-dark div:nth-child(odd):before,
+.ba-even-dark div:nth-child(even):before,
+.ba-light-even div:nth-child(even):before,
+.ba-light-odd div:nth-child(odd):before
+ {
+	content: "";
+	height: 80%;
+	width: 80%;
+	border-radius: 50%;
+	border: 2px solid #feeecd;
+	background-color: #532a2a;
+    float: left;
+	box-shadow: 2px 5px 4px rgba(0, 0, 0, .5);
+	margin-left: 10%;
+	margin-top: 10%;
+}
+.ba-light-even div:nth-child(even):before,
+.ba-light-odd div:nth-child(odd):before{
+
+	border: 2px solid #532a2a;
+	background-color: #feeecd;
+}
+div:nth-child(odd):hover::before, div:nth-child(even):hover::before{
+	box-shadow: 0px 0px 25px 1px rgba(83,42,42,1);
